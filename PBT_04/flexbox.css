@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+}
+
+.navbar {
+    min-height: 72px;
+    background: #10233f;
+    color: white;
+    padding: 0 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a,
+.auth a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.menu a:hover,
+.auth a:hover {
+    color: #ffdd57;
+    text-decoration: underline;
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.register {
+    background: #ffdd57;
+    color: #10233f !important;
+    padding: 10px 16px;
+    border-radius: 999px;
+}
+
+.wrapper {
+    width: min(1180px, 94%);
+    margin: 46px auto;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.desc {
+    color: #596579;
+    margin-bottom: 28px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 0 0 calc(25% - 15px);
+    width: calc(25% - 15px);
+    max-width: calc(25% - 15px);
+    min-height: 360px;
+    background: white;
+    border: 1px solid #d9e1ef;
+    border-radius: 18px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.25s;
+    box-shadow: 0 6px 18px rgba(18, 36, 64, 0.08);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(18, 36, 64, 0.18);
+}
+
+.thumb {
+    height: 130px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1e3a8a;
+    font-weight: 900;
+    margin-bottom: 14px;
+}
+
+.card h3 {
+    margin: 0 0 8px;
+    font-size: 21px;
+}
+
+.price {
+    color: #dc2626;
+    font-weight: 900;
+    margin: 0 0 8px;
+}
+
+.btn {
+    margin-top: auto;
+    border: none;
+    background: #10233f;
+    color: white;
+    padding: 12px 18px;
+    min-height: 44px;
+    border-radius: 999px;
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    .card { flex-basis: calc(50% - 10px); }
+    .navbar { flex-wrap: wrap; gap: 16px; padding: 18px 26px; }
+}

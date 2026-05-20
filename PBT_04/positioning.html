@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning Playground</title>
+    <link rel="stylesheet" href="positioning.css">
+</head>
+<body id="top">
+    <header class="fixed-header">
+        <div class="logo">ShopTLU</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#products">Products</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main class="page">
+        <aside class="sidebar">
+            <h2>Sticky Sidebar</h2>
+            <p>Sidebar dùng <b>position: sticky</b>.</p>
+            <ul>
+                <li>Danh mục</li>
+                <li>Giá tốt</li>
+                <li>Hàng mới</li>
+                <li>Khuyến mãi</li>
+            </ul>
+        </aside>
+
+        <section class="content" id="products">
+            <h1>Positioning Playground</h1>
+            <p class="lead">Cuộn trang để kiểm tra fixed header và sticky sidebar.</p>
+
+            <div class="product-card">
+                <span class="badge">HOT</span>
+                <div class="image-box">Product Image</div>
+                <h2>Laptop Gaming TLU</h2>
+                <p class="price">19.990.000đ</p>
+                <p>Card dùng <b>position: relative</b>, badge dùng <b>position: absolute</b>.</p>
+                <button>Mua ngay</button>
+            </div>
+
+            <div class="long-content">
+                <h2>Nội dung dài để scroll</h2>
+                <p>Header vẫn cố định ở trên cùng nhờ <b>position: fixed</b>.</p>
+                <p>Sidebar dính dưới header nhờ <b>position: sticky; top: 80px</b>.</p>
+                <p>Scroll tiếp để thấy header và sidebar giữ vị trí.</p>
+            </div>
+        </section>
+    </main>
+
+    <a class="top-btn" href="#top">↑</a>
+</body>
+</html>

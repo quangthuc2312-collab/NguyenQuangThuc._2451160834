@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Flexbox</title>
+    <link rel="stylesheet" href="debug_flexbox.css">
+</head>
+<body>
+    <h1>Debug Flexbox — Trước / Sau</h1>
+
+    <section class="panel">
+        <h2>Lỗi 1: Card không đều chiều cao</h2>
+        <div class="compare">
+            <div>
+                <h3>Trước</h3>
+                <div class="card-container before-cards">
+                    <article class="card"><div class="img"></div><h3>Card ngắn</h3><p>Mô tả ngắn.</p><button class="btn">Mua</button></article>
+                    <article class="card"><div class="img"></div><h3>Card dài</h3><p>Mô tả dài hơn làm chiều cao nội dung khác nhau và nút bị lệch.</p><button class="btn">Mua</button></article>
+                    <article class="card"><div class="img"></div><h3>Card vừa</h3><p>Mô tả vừa.</p><button class="btn">Mua</button></article>
+                </div>
+            </div>
+            <div>
+                <h3>Sau</h3>
+                <div class="card-container after-cards">
+                    <article class="card"><div class="img"></div><h3>Card ngắn</h3><p>Mô tả ngắn.</p><button class="btn">Mua</button></article>
+                    <article class="card"><div class="img"></div><h3>Card dài</h3><p>Mô tả dài hơn nhưng nút vẫn dính đáy nhờ margin-top auto.</p><button class="btn">Mua</button></article>
+                    <article class="card"><div class="img"></div><h3>Card vừa</h3><p>Mô tả vừa.</p><button class="btn">Mua</button></article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Lỗi 2: Căn giữa trong hero</h2>
+        <div class="compare hero-compare">
+            <div>
+                <h3>Trước</h3>
+                <div class="hero before-hero"><div class="hero-content">Hero Content</div></div>
+            </div>
+            <div>
+                <h3>Sau</h3>
+                <div class="hero after-hero"><div class="hero-content">Hero Content</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Lỗi 3: Sidebar bị co lại</h2>
+        <div class="compare">
+            <div>
+                <h3>Trước</h3>
+                <div class="layout before-layout"><aside class="sidebar">Sidebar 250px</aside><main class="content">Content rất dài rất dài rất dài rất dài rất dài rất dài rất dài rất dài rất dài rất dài</main></div>
+            </div>
+            <div>
+                <h3>Sau</h3>
+                <div class="layout after-layout"><aside class="sidebar">Sidebar 250px</aside><main class="content">Content dài nhưng sidebar không co lại</main></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

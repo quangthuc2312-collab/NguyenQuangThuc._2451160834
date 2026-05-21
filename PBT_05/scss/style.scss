@@ -1,0 +1,82 @@
+@import "variables";
+@import "mixins";
+@import "components";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-primary;
+  font-size: 15px;
+  color: $text-color;
+  background: #f2f2f2;
+}
+
+.page-layout {
+  width: 100%;
+  padding: $spacing-md;
+
+  @include respond-to(tablet) {
+    padding: 24px;
+  }
+
+  @include respond-to(desktop) {
+    display: grid;
+    grid-template-columns: 220px 1fr 180px;
+    gap: 24px;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+}
+
+.section-title {
+  margin-bottom: $spacing-md;
+
+  p {
+    margin: 0 0 6px;
+    color: $primary-color;
+    font-weight: bold;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  @include respond-to(tablet) {
+    h1 {
+      font-size: 30px;
+    }
+  }
+
+  @include respond-to(desktop) {
+    h1 {
+      font-size: 36px;
+    }
+  }
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-md;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @include respond-to(desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+  }
+}
+
+.site-footer {
+  @include flex-center;
+  padding: 20px;
+  background: $secondary-color;
+  color: white;
+}

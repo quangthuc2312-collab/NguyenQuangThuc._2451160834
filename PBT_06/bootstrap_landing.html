@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Landing Page</title>
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    <style>
+        .hero-slide { height: 520px; filter: brightness(0.75); }
+        .product-img { height: 220px; }
+        .detail-img { height: 220px; }
+    </style>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">QT Shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Sản phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sale">Khuyến mãi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Liên hệ</a></li>
+                </ul>
+                <form class="d-flex me-lg-3 mb-3 mb-lg-0" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Tìm sản phẩm" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
+                <a href="#" class="btn btn-primary position-relative">
+                    🛒
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-block w-100 hero-slide bg-primary bg-gradient"></div>
+                <div class="carousel-caption d-block">
+                    <h1 class="display-4 fw-bold">Mua sắm dễ dàng</h1>
+                    <p class="fs-5">Sản phẩm đẹp, giá tốt, giao hàng nhanh.</p>
+                    <a href="#products" class="btn btn-danger btn-lg">Mua ngay</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-block w-100 hero-slide bg-dark bg-gradient"></div>
+                <div class="carousel-caption d-block">
+                    <h1 class="display-4 fw-bold">Công nghệ mới</h1>
+                    <p class="fs-5">Nhiều thiết bị phù hợp học tập và làm việc.</p>
+                    <a href="#products" class="btn btn-primary btn-lg">Khám phá</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-block w-100 hero-slide bg-success bg-gradient"></div>
+                <div class="carousel-caption d-block">
+                    <h1 class="display-4 fw-bold">Ưu đãi hôm nay</h1>
+                    <p class="fs-5">Giảm giá nhiều sản phẩm bán chạy.</p>
+                    <a href="#sale" class="btn btn-success btn-lg">Xem sale</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </section>
+
+    <main class="container py-5" id="products">
+        <div class="text-center mb-5">
+            <span class="badge text-bg-primary mb-2">Sản phẩm nổi bật</span>
+            <h2 class="fw-bold">Danh sách sản phẩm</h2>
+            <p class="text-muted mb-0">Grid responsive: mobile 1 cột, tablet 2 cột, desktop 4 cột.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm position-relative">
+                    <span class="badge bg-danger position-absolute top-0 start-0 m-2">Sale</span>
+                    <div class="card-img-top product-img bg-light border-bottom d-flex align-items-center justify-content-center fs-1" aria-label="Điện thoại">📱</div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Smartphone X</h5>
+                        <p class="card-text text-muted">Màn hình đẹp, pin lâu, phù hợp học tập.</p>
+                        <div class="mt-auto">
+                            <p class="fw-bold text-danger mb-3">5.990.000đ</p>
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#quickViewModal">Xem nhanh</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm position-relative">
+                    <span class="badge bg-danger position-absolute top-0 start-0 m-2">Sale</span>
+                    <div class="card-img-top product-img bg-light border-bottom d-flex align-items-center justify-content-center fs-1" aria-label="Laptop">💻</div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Laptop Pro</h5>
+                        <p class="card-text text-muted">Nhẹ, nhanh, dùng tốt cho học online.</p>
+                        <div class="mt-auto">
+                            <p class="fw-bold text-danger mb-3">12.490.000đ</p>
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#quickViewModal">Xem nhanh</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm position-relative">
+                    <span class="badge bg-danger position-absolute top-0 start-0 m-2">Sale</span>
+                    <div class="card-img-top product-img bg-light border-bottom d-flex align-items-center justify-content-center fs-1" aria-label="Tai nghe">🎧</div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Tai nghe Beat</h5>
+                        <p class="card-text text-muted">Âm thanh rõ, có chống ồn cơ bản.</p>
+                        <div class="mt-auto">
+                            <p class="fw-bold text-danger mb-3">890.000đ</p>
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#quickViewModal">Xem nhanh</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm position-relative">
+                    <span class="badge bg-danger position-absolute top-0 start-0 m-2">Sale</span>
+                    <div class="card-img-top product-img bg-light border-bottom d-flex align-items-center justify-content-center fs-1" aria-label="Đồng hồ">⌚</div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Smart Watch</h5>
+                        <p class="card-text text-muted">Theo dõi sức khỏe, chống nước nhẹ.</p>
+                        <div class="mt-auto">
+                            <p class="fw-bold text-danger mb-3">1.290.000đ</p>
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#quickViewModal">Xem nhanh</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-img-top product-img bg-light border-bottom d-flex align-items-center justify-content-center fs-1" aria-label="Giày">👟</div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Sneaker Basic</h5>
+                        <p class="card-text text-muted">Kiểu đơn giản, dễ phối đồ hằng ngày.</p>
+                        <div class="mt-auto"><button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#quickViewModal">Xem nhanh</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-img-top product-img bg-light border-bottom d-flex align-items-center justify-content-center fs-1" aria-label="Balo">🎒</div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Balo Student</h5>
+                        <p class="card-text text-muted">Có ngăn laptop, phù hợp đi học.</p>
+                        <div class="mt-auto"><button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#quickViewModal">Xem nhanh</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-img-top product-img bg-light border-bottom d-flex align-items-center justify-content-center fs-1" aria-label="Camera">📷</div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Camera Mini</h5>
+                        <p class="card-text text-muted">Chụp ảnh rõ, thiết kế nhỏ gọn.</p>
+                        <div class="mt-auto"><button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#quickViewModal">Xem nhanh</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-img-top product-img bg-light border-bottom d-flex align-items-center justify-content-center fs-1" aria-label="Bàn phím">⌨️</div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Keyboard Lite</h5>
+                        <p class="card-text text-muted">Gõ êm, phù hợp học tập và văn phòng.</p>
+                        <div class="mt-auto"><button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#quickViewModal">Xem nhanh</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="container pb-5" id="sale">
+        <div class="alert alert-danger shadow-sm" role="alert">
+            <strong>Sale cuối tuần:</strong> Giảm thêm 10% cho đơn hàng từ 500.000đ.
+        </div>
+    </section>
+
+    <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="quickViewModalLabel">Chi tiết sản phẩm</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="detail-img bg-light rounded mb-3 d-flex align-items-center justify-content-center fs-1" aria-label="Chi tiết sản phẩm">📱</div>
+                    <h5>Thông tin nhanh</h5>
+                    <p class="text-muted mb-0">Sản phẩm đang có khuyến mãi, bảo hành 12 tháng, giao hàng trong 2-3 ngày.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary">Thêm vào giỏ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-5" id="contact">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5>QT Shop</h5>
+                    <p class="text-white-50">Shop demo dùng Bootstrap 5.</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5>Danh mục</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li>Điện thoại</li>
+                        <li>Laptop</li>
+                        <li>Phụ kiện</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5>Hỗ trợ</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li>Chính sách đổi trả</li>
+                        <li>Bảo hành</li>
+                        <li>Thanh toán</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5>Liên hệ</h5>
+                    <p class="text-white-50 mb-1">Email: support@qtshop.vn</p>
+                    <p class="text-white-50">Hotline: 0123 456 789</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>

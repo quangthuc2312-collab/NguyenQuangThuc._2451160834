@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: $font-primary;
+    background: $bg-color;
+    color: $text-color;
+}
+
+.site-header {
+    background: #333;
+    color: white;
+    padding: $spacing-md;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .main-nav {
+        display: none;
+
+        a {
+            color: white;
+            text-decoration: none;
+            margin-left: $spacing-md;
+        }
+    }
+
+    @include respond-to(tablet) {
+        .main-nav {
+            display: block;
+        }
+    }
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+
+    @include respond-to(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to(desktop) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.product-card {
+    background: $card-bg;
+    border: 1px solid $border-color;
+    overflow: hidden;
+    @include card-shadow;
+
+    .image-box {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 150px;
+        background: $placeholder-bg;
+        border-bottom: 1px solid $border-color;
+        @include flex-center;
+
+        span {
+            font-weight: bold;
+            font-size: 22px;
+        }
+    }
+
+    .card-body {
+        padding: $spacing-md;
+    }
+
+    .card-title {
+        color: $text-color;
+        margin-bottom: $spacing-sm;
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+    }
+
+    &.featured {
+        border: 2px solid $primary-color;
+    }
+}
+
+.footer {
+    @include flex-center;
+    padding: $spacing-md;
+    background: #333;
+    color: white;
+}

@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  color: #222;
+}
+
+.header {
+  text-align: center;
+  padding: 30px 16px;
+  background: #333;
+  color: white;
+}
+
+.header h1 {
+  margin: 0 0 10px;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 28px 16px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+.product-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+.image-box {
+  overflow: hidden;
+}
+
+.demo-image {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e5e5e5;
+  color: #555;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .demo-image {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.buy-btn {
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 16px;
+  background: #2457a6;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.buy-btn:hover {
+  background-color: #333;
+  color: #ffeb3b;
+  transform: scale(1.05);
+}
+
+.loading-box {
+  margin-top: 34px;
+  padding: 24px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.spinner {
+  width: 54px;
+  height: 54px;
+  margin: 18px auto 0;
+  border: 6px solid #ddd;
+  border-top-color: #2457a6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.delay {
+  animation-delay: 0.25s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <h1>Keyboard Gallery</h1>
+        <p>Phím: ← → chuyển ảnh, 1-9 chọn ảnh, Space play/pause, Ctrl+K mở command.</p>
+        <section class="gallery" aria-label="Gallery ảnh">
+            <button id="prevBtn" aria-label="Ảnh trước">←</button>
+            <img id="mainImage" src="" alt="Ảnh trong gallery" tabindex="0">
+            <button id="nextBtn" aria-label="Ảnh sau">→</button>
+        </section>
+        <div id="thumbs" class="thumbs" aria-label="Danh sách ảnh nhỏ"></div>
+        <p id="status" aria-live="polite"></p>
+        <button id="playBtn" aria-label="Bật hoặc tắt slideshow">Play slideshow</button>
+        <button id="openPalette" aria-label="Mở command palette">Mở command palette</button>
+    </main>
+
+    <div id="imageModal" class="modal" role="dialog" aria-modal="true" aria-label="Xem ảnh lớn">
+        <div class="modal-box">
+            <button id="closeImageModal" aria-label="Đóng ảnh lớn">Đóng</button>
+            <img id="modalImage" src="" alt="Ảnh lớn">
+        </div>
+    </div>
+
+    <div id="palette" class="palette" role="dialog" aria-modal="true" aria-label="Command palette">
+        <div class="palette-box">
+            <input id="commandInput" type="text" placeholder="Nhập command..." aria-label="Ô tìm kiếm command">
+            <ul id="commandList"></ul>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

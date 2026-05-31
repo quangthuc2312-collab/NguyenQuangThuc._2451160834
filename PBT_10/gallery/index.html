@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Scroll Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <h1>Infinite Scroll Gallery</h1>
+        <p class="note">Load ảnh theo từng trang, lazy loading bằng IntersectionObserver.</p>
+        <div id="status"></div>
+        <div id="gallery" class="gallery"></div>
+        <div id="loadMore" class="load-more hidden">Đang tải thêm...</div>
+        <div id="load-trigger"></div>
+    </main>
+
+    <div id="lightbox" class="lightbox hidden">
+        <button id="closeLightbox">Đóng</button>
+        <img id="lightboxImg" alt="large photo">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Multimedia</title>
+    <style>
+body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; color: #222; }
+main { width: 90%; max-width: 980px; margin: 25px auto; background: white; padding: 20px; border: 1px solid #ddd; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; }
+figure { margin: 0; border: 1px solid #ddd; padding: 10px; background: #fafafa; }
+figcaption { margin-top: 8px; font-weight: bold; }
+iframe, video { width: 100%; max-width: 720px; display: block; margin: 15px 0; }
+.logo { display: flex; align-items: center; gap: 10px; font-weight: bold; }
+</style>
+</head>
+<body>
+    <main>
+        <div class="logo">
+            <svg width="55" height="55" viewBox="0 0 100 100" aria-label="Logo cửa hàng">
+                <rect x="10" y="10" width="80" height="80" rx="18" fill="#333"></rect>
+                <circle cx="50" cy="50" r="24" fill="#ffffff"></circle>
+            </svg>
+            <h1>Shop Sinh Viên</h1>
+        </div>
+
+        <h2>Ảnh sản phẩm</h2>
+        <section class="grid">
+            <figure>
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22420%22%20viewBox%3D%220%200%20800%20420%22%3E%0A%3Crect%20width%3D%22800%22%20height%3D%22420%22%20fill%3D%22%23eef6ff%22/%3E%0A%3Crect%20x%3D%22310%22%20y%3D%2270%22%20width%3D%22180%22%20height%3D%22280%22%20rx%3D%2232%22%20fill%3D%22%23a9d1ff%22/%3E%3Crect%20x%3D%22335%22%20y%3D%22105%22%20width%3D%22130%22%20height%3D%22210%22%20rx%3D%2212%22%20fill%3D%22white%22%20opacity%3D%220.85%22/%3E%0A%3Ctext%20x%3D%22400%22%20y%3D%22360%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%22%20font-size%3D%2240%22%20fill%3D%22%23111%22%3E%C4%90i%E1%BB%87n%20tho%E1%BA%A1i%20XPhone%3C/text%3E%0A%3C/svg%3E" alt="Điện thoại XPhone màu xanh, màn hình lớn" loading="lazy" style="max-width: 100%; height: auto;">
+                <figcaption>Điện thoại XPhone - 8.990.000đ</figcaption>
+            </figure>
+            <figure>
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22420%22%20viewBox%3D%220%200%20800%20420%22%3E%0A%3Crect%20width%3D%22800%22%20height%3D%22420%22%20fill%3D%22%23fff3e8%22/%3E%0A%3Ccircle%20cx%3D%22400%22%20cy%3D%22210%22%20r%3D%22130%22%20fill%3D%22%23ffd39b%22%20opacity%3D%220.85%22/%3E%0A%3Ctext%20x%3D%22400%22%20y%3D%22360%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%22%20font-size%3D%2240%22%20fill%3D%22%23111%22%3ETai%20nghe%20Bass%20Pro%3C/text%3E%0A%3C/svg%3E" alt="Tai nghe Bass Pro màu cam" loading="lazy" style="max-width: 100%; height: auto;">
+                <figcaption>Tai nghe Bass Pro - 790.000đ</figcaption>
+            </figure>
+            <figure>
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22420%22%20viewBox%3D%220%200%20800%20420%22%3E%0A%3Crect%20width%3D%22800%22%20height%3D%22420%22%20fill%3D%22%23effaf1%22/%3E%0A%3Crect%20x%3D%22240%22%20y%3D%2290%22%20width%3D%22320%22%20height%3D%22220%22%20rx%3D%2228%22%20fill%3D%22%239ed8a6%22%20opacity%3D%220.9%22/%3E%0A%3Ctext%20x%3D%22400%22%20y%3D%22360%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%22%20font-size%3D%2240%22%20fill%3D%22%23111%22%3E%C4%90%E1%BB%93ng%20h%E1%BB%93%20SmartFit%3C/text%3E%0A%3C/svg%3E" alt="Đồng hồ SmartFit dây xanh" loading="lazy" style="max-width: 100%; height: auto;">
+                <figcaption>Đồng hồ SmartFit - 1.490.000đ</figcaption>
+            </figure>
+        </section>
+
+        <h2>Video YouTube</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video giới thiệu sản phẩm" allowfullscreen></iframe>
+
+        <h2>Video sản phẩm</h2>
+        <video controls poster="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22420%22%20viewBox%3D%220%200%20800%20420%22%3E%0A%3Crect%20width%3D%22800%22%20height%3D%22420%22%20fill%3D%22%23f4f4f4%22/%3E%0A%3Crect%20x%3D%22240%22%20y%3D%2290%22%20width%3D%22320%22%20height%3D%22220%22%20rx%3D%2228%22%20fill%3D%22%23d5e8ff%22%20opacity%3D%220.9%22/%3E%0A%3Ctext%20x%3D%22400%22%20y%3D%22360%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%22%20font-size%3D%2240%22%20fill%3D%22%23111%22%3EVideo%20gi%E1%BB%9Bi%20thi%E1%BB%87u%3C/text%3E%0A%3C/svg%3E">
+            <source src="video-intro.mp4" type="video/mp4">
+            <source src="video-intro.webm" type="video/webm">
+            Trình duyệt không hỗ trợ video.
+        </video>
+
+        <h2>Audio giới thiệu</h2>
+        <audio controls>
+            <source src="audio-intro.mp3" type="audio/mpeg">
+            Trình duyệt không hỗ trợ audio.
+        </audio>
+    </main>
+</body>
+</html>

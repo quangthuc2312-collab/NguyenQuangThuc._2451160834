@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Test</title>
+    <style>
+body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; color: #222; }
+main { width: 90%; max-width: 900px; margin: 25px auto; background: white; padding: 20px; border: 1px solid #ddd; }
+h1 { margin-top: 0; }
+fieldset { margin-bottom: 18px; border: 1px solid #bbb; padding: 15px; }
+legend { font-weight: bold; }
+label { display: block; margin-top: 10px; }
+input, select, textarea, button { width: 100%; box-sizing: border-box; padding: 9px; margin-top: 5px; font-size: 15px; }
+input[type="radio"], input[type="checkbox"] { width: auto; margin-right: 6px; }
+.inline label { display: inline-block; margin-right: 15px; }
+.buttons { display: flex; gap: 10px; }
+button { cursor: pointer; background: #333; color: white; border: none; }
+button[type="reset"] { background: #777; }
+input:invalid, .invalid { border: 2px solid #c0392b; }
+.result { background: #fff5f5; border: 1px solid #c0392b; padding: 10px; margin: 12px 0; }
+</style>
+</head>
+<body>
+    <main>
+        <h1>Validation Test</h1>
+        <p class="result">Sau khi bấm Submit, form bị chặn vì các trường bên dưới chưa hợp lệ.</p>
+        <form action="#" method="POST">
+            <label for="case1">Trường hợp 1: required để trống</label>
+            <input class="invalid" type="text" id="case1" name="case1" required value="" placeholder="Bắt buộc nhập">
+
+            <label for="case2">Trường hợp 2: email nhập abc</label>
+            <input class="invalid" type="email" id="case2" name="case2" value="abc" placeholder="you@email.com">
+
+            <label for="case3">Trường hợp 3: number min 1 max 10 nhập 15</label>
+            <input class="invalid" type="number" id="case3" name="case3" min="1" max="10" value="15" placeholder="1 đến 10">
+
+            <label for="case4">Trường hợp 4: pattern 10 chữ số nhập abc123</label>
+            <input class="invalid" type="text" id="case4" name="case4" pattern="[0-9]{10}" value="abc123" placeholder="0901234567">
+
+            <label for="case5">Trường hợp 5: password minlength 8 nhập 123</label>
+            <input class="invalid" type="password" id="case5" name="case5" minlength="8" value="123" placeholder="Ít nhất 8 ký tự">
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
